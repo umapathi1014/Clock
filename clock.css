@@ -1,0 +1,227 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    width:100vw;
+    height:100vh;
+    overflow: hidden;
+    background: rgb(3,3,27);
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.clock{
+    width:300px;
+    height:300px;
+    display: grid;
+    place-items: center;
+}
+.back{
+    width:300px;
+    height:300px;
+    transform: rotate(44deg);
+}
+.dot-con{
+    width:300px;
+    height:300px;
+    position: absolute;
+}
+.dot{
+    width:5px;
+    height:5px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.dot-con:nth-child(1){
+    transform: rotate(360deg);
+}
+.dot-con:nth-child(2){
+    transform: rotate(30deg);
+}
+.dot-con:nth-child(3){
+    transform: rotate(60deg);
+}
+.dot-con:nth-child(4){
+    transform: rotate(90deg);
+}
+.dot-con:nth-child(5){
+    transform: rotate(120deg);
+}
+.dot-con:nth-child(6){
+    transform: rotate(150deg);
+}
+.dot-con:nth-child(7){
+    transform: rotate(180deg);
+}
+.dot-con:nth-child(8){
+    transform: rotate(210deg);
+}
+.dot-con:nth-child(9){
+    transform: rotate(240deg);
+}
+.dot-con:nth-child(10){
+    transform: rotate(270deg);
+}
+.dot-con:nth-child(11){
+    transform: rotate(300deg);
+}
+.dot-con:nth-child(12){
+    transform: rotate(330deg);
+}
+.c3,.c6,.c9,.c12{
+    width:20px;
+    border-radius: 10px;
+    transform: rotate(45deg);
+}
+.pins{
+    width:300px;
+    height:300px;
+    position: absolute;
+    display: grid;
+    place-items: center;
+}
+.pin-s{
+    width:3px;
+    height:60%;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.pin-m{
+    width:5px;
+    height:50%;
+    background-color: #fff;
+    border-radius: 5px;
+}.pin-h{
+    width:5px;
+    height:50%;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.sec{
+    width:250px;
+    height:250px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    animation: clock 60s steps(60) infinite;
+}
+.min{
+    width:200px;
+    height:200px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    animation: clock 3600s steps(60) infinite;
+}.hr{
+    width:150px;
+    height:150px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    animation: clock 46800s steps(60) infinite;
+}
+.center{
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+@keyframes clock{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.digitel{
+    width:440px;
+    height:60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+}
+.dsec,.dmin,.dhr,.dap{
+    width:100px;
+    height:50px;
+    background:rgb(3,3,27);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.dap{
+    width:100px;
+    height:50px;
+    background:rgb(3,3,27);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.dap-c{
+    animation:dclockap 93600s steps(2) infinite;
+}
+.dsec-c{
+    animation:dclock 60s steps(60) infinite;
+}
+.dmin-c{
+    animation:dclock 3600s steps(60) infinite;
+}
+.dhr-c{
+    animation:dclockhr 46800s steps(12) infinite;
+}
+.num{
+    font-size: 2em;
+    display: grid;
+    place-content: center;
+    color: #fff;
+    width:100px;
+    height:50px;
+}
+.da,.dp{
+    font-size: 2em;
+    display: grid;
+    place-content: center;
+    color: #fff;
+    width:100px;
+    height:50px;
+}
+@keyframes dclock{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-3000px);
+    }
+}
+@keyframes dclockap{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-100px);
+    }
+}
+@keyframes dclockhr{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-600px);
+    }
+}
+.des{
+    width:440px;
+    height:50px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.s,.m,.h,.ap{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    font-size: 1em;
+    color:#fff
+}
